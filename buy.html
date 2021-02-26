@@ -33,20 +33,20 @@
                 <div class="card-heading"></div>
                 <div class="card-body">
                     <h2 class="title">Buy Drone </h2>
-                    <p style="color: white;"><b>Aeromodelling Club:</b> We would recommend that you buy the kit for a better experience in the workshop and this can be used for your future projects as well.</p>
+                    <p style="color: white;" id = "test"><b>Aeromodelling Club:</b> We would recommend that you buy the kit for a better experience in the workshop and this can be used for your future projects as well.</p>
                     <br>
 
                     <p style="color: white;"> Are You willing to buy a drone </p>
                     <div class="p-t-10">
-                        <button class="btn btn--pill btn--green" type="submit" ><a href="yes.html">Yes</button></a>
-                        <!-- <button class="btn btn--pill btn--green" type="submit" ><a href="no.html">Can't buy right now </button></a> -->
+                        <button class="btn btn--pill btn--green" onclick = "dronefunc1()" ><a href="yes.html">Yes</button></a>
+                        <!-- <button class="btn btn--pill btn--green" type="submit"  onclick = "dronefunc2()"><a href="no.html">Can't buy right now </button></a> -->
                     </div>
                     <div class="p-t-10">
                         <!-- <button class="btn btn--pill btn--green" type="submit" ><a href="yes.html">Yes</button></a> -->
-                        <button class="btn btn--pill btn--green" type="submit" ><a href="no.html">Can't buy right now </button></a>
+                        <button class="btn btn--pill btn--green" type="submit"  onclick = "dronefunc2()" ><a href="no.html">Can't buy right now </button></a>
                     </div>
                     <div class="p-t-10">
-                        <button class="btn btn--pill btn--green" type="submit" ><a href="info.html">Prev</button></a>
+                        <button class="btn btn--pill btn--green" type="submit"  ><a href="info.html">Prev</button></a>
                         
                     </div>
                     
@@ -96,6 +96,14 @@
     </div>
 
     <!-- Jquery JS-->
+    <script>
+    function dronefunc1(){
+    	localStorage.setItem("drone", "yes");
+    }
+    function dronefunc2(){
+    	localStorage.setItem("drone","no");
+    }
+    </script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <!-- Vendor JS-->
     <script src="vendor/select2/select2.min.js"></script>
@@ -104,7 +112,9 @@
 
     <!-- Main JS-->
     <script src="js/global.js"></script>
-
+<script>
+	document.getElementById("test").innerHTML = localStorage.getItem("name"); 
+</script>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 
 </html>
